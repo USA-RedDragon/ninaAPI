@@ -560,6 +560,10 @@ namespace ninaAPI.WebService.V2
                 {
                     response.Response = images;
                 }
+                else if (!all && index == 0) {
+                    List<object> result = [images.ElementAt(images.Count()-1)];
+                    response.Response = result;
+                }
                 else if (index >= 0 && index < images.Count())
                 {
                     List<object> result = [images.ElementAt(index)]; // TODO: put this directly into the response (maybe)
