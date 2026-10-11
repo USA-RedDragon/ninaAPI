@@ -560,7 +560,7 @@ namespace ninaAPI.WebService.V2
                 {
                     response.Response = images;
                 }
-                else if (index == -1) {
+                else if (index == -1 && images.Any()) {
                     List<object> result = [images.ElementAt(images.Count()-1)];
                     response.Response = result;
                 }
